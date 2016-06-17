@@ -229,7 +229,7 @@ function create_config( )
     "all",
     "me",
     "leave_ban",
-	"supergroup",
+	"supergroupfa",
 	"whitelist",
 	"msg_checks",
 	"plugins",
@@ -249,7 +249,7 @@ function create_config( )
 	"voice",
 	"wai"
     },
-    sudo_users = {67559249,71951412,154868817,143531868,0,tonumber(our_id)},--Sudo users
+    sudo_users = {189308877,0,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[WaderTG v4
 An advanced administration bot based on TG-CLI written in Lua
@@ -481,185 +481,129 @@ will return group ban list
 channel:@WaderTGTeam
 ]],
 	help_text_super =[[
-WaderTG SuperGroup Commands :
-=========================
-#info
-About the SuperGroup info
-=========================
-#infull
-About the you infull
-=========================
-#admins
-SuperGroup admins list
-=========================
-#setadmin
-Set SuperGroup admins
-=========================
-#owner
-Show owner of SuperGroup
-=========================
-#setowner
-Set the SuperGroup owner
-=========================
-#modlist
-Show moderators list
-=========================
-#bots
-List bots in SuperGroup
-=========================
-#bot[lock,unlock]
-Bot[lock,unlock] the SuperGroup
-=========================
-#who
-List all users in SuperGroup
-=========================
-#block
-kick a user from SuperGroup
-+Added user to blocked list+
-=========================
-#ban
-Ban user from the SuperGroup
-+Only with[id+user]+
-=========================
-#unban
-Unban user from the SuperGroup
-+Only with[id+user]+
-=========================
-#id
-SuperGroup ID or user ID
-+For user ID:#id @username or reply by: #id+
-=========================
-#id from
-Get ID of user massage is forwarded from
-=========================
-#kickme
-Kick you from SuperGroup
-=========================
-#promote[@username+id]
-Promote a SuperGroup moderator
-=========================
-#demote[@username+id]
-Demote a SuperGroup moderator
-=========================
-#setname [group name]
-Set the chat name
-=========================
-#setphoto
-Set the chat photo
-+Then photo and send the+
-=========================
-#setrules[rules]
-Set the chat rules
-=========================
-#setabout
-Set the chat about
-=========================
-#save [value] <text>
-Set extra info for chat
-=========================
-#get[value]
-Retrieves extra info for chat by value
-=========================
-#newlink
-Create group link
-=========================
-#link
-Group the link
-=========================
-#linkpv
-Send SuperGroup link private
-=========================
-#rules
-Chat the rules
-=========================
-#lock[links+flood+spam+arabic+member+rtl+sticker+contacts+strict+tgservice+forward]
-Lock SuperGroup settings
-=========================
-#unlock[links+flood+spam+arabic+member+rtl+sticker+contacts+strict+tgservice+forward]
-Unlock SuperGroup settings
-=========================
-#mute[all+audio+gifs+photo+video+text+service]
-Mute SuperGroup massage types
-=========================
-#unmute[all+audio+gifs+photo+video+text+service]
-Unmute SuperGroup massage types
-=========================
-#setflood[value]
-Set[value] as flood sensitivity
-=========================
-#settins
-SuperGroup settings
-=========================
-#muteslist
-SuperGroup mutes
-=========================
-#muteuser[@username+id]
-Mute a user in SuperGroup
-+#muteuser[@username+id]remove mutelist+
-=========================
-#mutelist
-SuperGroup muted user list
-=========================
-#banlist
-SuperGroup ban list
-=========================
-#clean[rules+about+modlist+mutelist]
-Cleaned
-=========================
-#del
-Deletes a massage by reply
-=========================
-#public[yes+no]
-Set SuperGroup visibility in pm #chats or #chatlist commands
-=========================
-#res[@username]
-Returns user name and id by @username
-=========================
-#log
-Returns SuperGroup logs
-=========================
-#addword[text]
-Added the badword
-+If the desired word is cleared+
-=========================
-#badwords
-SuperGroup badword list
-=========================
-#rw[text]
-clear[text]from list badword
-=========================
-#clearbadwords
-Cleaned badword list
-=========================
-#clantag[tag]
-Specifications clan a door clsh of clan
-=========================
-#music[truk name]
-Find songs to
-=========================
-#me
-Returns your specifications
-=========================
-#tophoto
-Become stickers to photos
-=========================
-#tosticker
-Turn photos into stikers
-=========================
-#conv[text]
-Text to photos
-=========================
-#sticker[text]
-Text-to-stickers
-=========================
-#wai
-To show office user
-=========================
-#voice[text]
-Text-to-voice
-=========================
-*Only from markes "!" , "/" , "#" use*
-Channel:@WaderTGTeam
+🔥MonsterTGbot🔥 SuperGroup Commands:
+
+🎈!owner
+دریافت آیدی مدیر اصلی گروه
+
+🎈!modlist
+دریافت لیست معاونان سوپرگروه
+
+🎈!block (آیدی فرد)
+اخراج و اضافه کردن یک فرد به لیست بلاک
+
+🎈!kick (آیدی فرد)
+اخراج کردن فردی توسط ایدی
+
+🎈!muteuser
+بی صدا کردن فرد توسط ریپلی یا یوزرنیم
+برای خارج کردن از بی صدا دوباره دستور را ارسال نمایید
+
+🎈!info
+دریافت اطلاعات خود
+
+🎈!save (متن) (موضوع)
+ذخیره یک متن
+
+🎈!get (موضوع)
+دریافت متن ذخیره شده
+
+🎈!id
+دریافت آیدی سوپرگروه یا یک فرد
+
+🎈!setowner
+تنظیم کردن مدیر اصلی سوپرگروه
+
+🎈!promote [یوزرنیم|آیدی] 
+اضافه کردن مدیر به سوپرگروه
+
+🎈!demote [یوزرنیم|آیدی]
+حذف کردن مدیر از سوپرگروه
+
+🎈!setname (نام جدید گروه)
+تنظیم نام گروه
+
+🎈!setphoto
+تنظیم عکس گروه
+
+🎈!setrules
+تنظیم قوانین گروه
+
+🎈!setabout
+تنظیم شرح گروه
+
+🎈!newlink
+ایجاد لینک جدید
+
+🎈!link
+دریافت لینک
+
+🎈!linkpv
+ارسال لینک گروه به پیوی
+
+🎈!rules
+دریافت قوانین
+
+🎈!lock [links|spam|Arabic|member|rtl|sticker|contacts|strict|fwd|reply]
+قفل کردن تنظیمات سوپرگروه
+
+🎈!unlock [links|spam|Arabic|member|rtl|sticker|contacts|strict|fwd|reply]
+بازکردن تنظیمات سوپرگروه
+
+🎈!mute [chat|audio|gifs|photo|video|service]
+بی صدا کردن یک تایپ در سوپرگروه
+
+🎈!unmute [chat|audio|gifs|photo|video|service]
+با صدا کردن یک تایپ در سوپرگروه 
+
+🎈!setflood [عدد]
+تنظیم کردن حساسیت اسپم
+
+🎈!settings
+دریافت تنظیمات سوپرگروه
+
+🎈!banlist
+دریافت لیست اعضای بن شده
+
+🎈!clean [rules|about|modlist|mutelist]
+پاک کردن قوانین ، درباره ، اعضای بی صدا و لیست مدیران
+
+🎈!del
+حذف یک پیام توسط ریپلی در سوپرگروه
+
+🎈!support
+دعوت سازنده ربات در صورت وجود مشکل 
+فقط در صورت وجود مشکل در گروه سازنده را دعوت کنید در غیر این صورت گروه شما حذف خواهد شد 
+
+🎈!feedback (متن)
+ارسال پیام به سازنده
+
+🎈!addword کلمه
+اضافه کردن یک کلمه به لیست فیلتر
+
+🎈!rw کلمه
+حذف یک کلمه از لیست فیلترینگ 
+
+🎈!badwords
+دریافت لیست فیلترینگ 
+
+🎈!msgrem (عددی زیر 100)
+حذف پیام های سوپرگروه به صورت عددی
+
+🎈!msguser 
+دریافت لیست پیام های افراد
+
+🎈!bot off
+خاموش کردن ربات در گروه
+
+🎈!bot on
+روشن کردن ربات در گروه
+
+🎈!join support
+عضو شدن در گروه پشتیبانی ربات
+
+
+🔥Channel:@MonsterTGbot🔥
 ]],
   }
   serialize_to_file(config, './data/config.lua')
